@@ -1,40 +1,92 @@
-body, html{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+html,
+body {
     margin: 0;
     padding: 0;
-    background: whitesmoke;
-    -webkit-user-select: none;
-    user-select: none;         
-    }
-h1, a{
-    font-family: monospace;
-    text-decoration: none;
+    background-image: url("imgs/sunset.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    user-select: none;
 }
 
-
-a{
-    background: black;
-    height: auto;
-    width: 350px;
-    margin-top: 10px;
-    color: white;
+body {
+    min-height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 19px;
-    padding: 15px 0;
-    border: 1.5px solid gray;
 }
-img {
-  width: 150px;
-  height: 150px;
-  border-radius: 100%;
-  border: 2px solid gray;
-  box-sizing: border-box;
-  margin-top: 5px;
- }
 
+.container {
+    width: 650px;
+    min-height: 250px;
+    padding: 20px;
+    box-sizing: border-box;
+
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 20px;
+
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+h1 {
+    color: white;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.socials img {
+    width: 80px;
+}
+
+
+/* 📱 Phone */
+@media (max-width: 600px) {
+
+    .container {
+        width: 80%;
+        min-height: 180px;
+        padding: 20px 15px;
+    }
+
+    .socials {
+        gap: 18px;
+    }
+
+    .socials img {
+        width: 55px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+}
+
+
+/* 📱 Small phone */
+@media (max-width: 380px) {
+
+    .container {
+        width: 82%;
+        min-height: 160px;
+    }
+
+    .socials {
+        gap: 12px;
+    }
+
+    .socials img {
+        width: 48px;
+    }
+
+    h1 {
+        font-size: 23px;
+    }
+}
